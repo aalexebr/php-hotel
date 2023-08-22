@@ -49,7 +49,15 @@ $hotels = [
 </head>
 <body>
     <header>
-        hello
+        <?php
+            foreach($hotels as $index => $hotel){
+                // echo var_dump($hotel);
+                foreach($hotel as $i => $value){
+                    echo $value;
+                }
+
+            };
+        ?>
     </header>
     <main>
         <table>
@@ -69,9 +77,6 @@ $hotels = [
                 </tr>
             </thead>
             <tbody>
-                <?php
-                    foreach($hotels as $index => $hotel){
-                ?>
                     <tr>
                         <?php
                             foreach($hotels as $index => $hotel){
@@ -90,8 +95,11 @@ $hotels = [
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
+                                parking
                                 <?php
-                                    echo $hotel['parking']; 
+                                    if($hotel['parking'] == true){echo 'yes';}
+                                    else echo 'no';
+                                    // echo $hotel['parking']; 
                                 ?>
                             </td>
                         <?php
@@ -103,6 +111,7 @@ $hotels = [
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
+                                vote
                                 <?php
                                     echo $hotel['vote']; 
                                 ?>
@@ -124,9 +133,6 @@ $hotels = [
                             }
                         ?>
                     </tr>
-                <?php
-                    }
-                ?>
             </tbody>
         </table>
         
