@@ -64,6 +64,7 @@ $hotels = [
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <?php
                     foreach($hotels as $index => $hotel){
                     ?>
@@ -79,6 +80,9 @@ $hotels = [
             </thead>
             <tbody>
                     <tr>
+                        <td>
+                            description
+                        </td>
                         <?php
                             foreach($hotels as $index => $hotel){
                         ?>
@@ -92,11 +96,13 @@ $hotels = [
                         ?>
                     </tr>
                     <tr>
+                        <td>
+                            parking
+                        </td>
                         <?php
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
-                                parking
                                 <?php
                                     if($hotel['parking'] == true){echo 'yes';}
                                     else echo 'no';
@@ -108,11 +114,13 @@ $hotels = [
                         ?>
                     </tr>
                     <tr>
+                        <td>
+                            vote
+                        </td>
                         <?php
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
-                                vote
                                 <?php
                                     echo $hotel['vote']; 
                                 ?>
@@ -122,14 +130,17 @@ $hotels = [
                         ?>
                     </tr>
                     <tr>
+                        <td>
+                            distance to center
+                        </td>
                         <?php
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
-                                distance to center
                                 <?php
                                     echo $hotel['distance_to_center']; 
                                 ?>
+                                km
                             </td>
                         <?php
                             }
