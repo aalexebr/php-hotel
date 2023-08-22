@@ -45,6 +45,7 @@ $hotels = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>PHP Hotel</title>
 </head>
 <body>
@@ -125,6 +126,7 @@ $hotels = [
                             foreach($hotels as $index => $hotel){
                         ?>
                             <td>
+                                distance to center
                                 <?php
                                     echo $hotel['distance_to_center']; 
                                 ?>
